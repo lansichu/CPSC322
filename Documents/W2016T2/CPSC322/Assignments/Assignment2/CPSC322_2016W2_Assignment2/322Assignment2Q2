@@ -1,0 +1,39 @@
+
+
+public static void Main() {
+		for (int A = 0; A < 4; A++) {
+			for (int B = 0; B < 4; B++) {
+				for (int C = 0; C < 4; C++) {
+					for (int D = 0; D < 4; D++) {
+						if (D != C) {
+							for (int E = 0; E < 4; E++){
+								if ((E != C) && (E < (D-1))) {
+									for (int F = 0; F < 4; F++) {
+										if ((|F - B| == 1) && (C != F) && (D != F) && (|E - F| % 2 == 1)) {
+											for (int G = 0; G < 4; G++) {
+												if ((A > G) && (D > G) && (G != F) && (|G - C| == 1)) {
+												for (int H = 0; H < 4; H++) {
+													if ((A <= H) && (G < H) && (|H - C| %2 == 0) && (H != D) && (E != (H-2)) && (H != F)) {
+													System.out.println("SUCCESS");
+													};
+												};
+												} else {
+													System.out.println("(A > G) && (D > G) && (G != F) && |G - C| == 1) failure")
+												};
+											}
+										} else {
+											System.out.println("(|F - B| == 1) && (C != F) && (D != F) && (|E - F| % 2 == 1) failure");
+										};
+									}
+								} else {
+									System.out.println("(E != C) && (E <(D-1)) failure");
+								};
+							} else {
+								System.out.println("D != C failure");
+							};
+						}
+					}
+				}
+			}
+		}
+	}
